@@ -37,8 +37,9 @@ class starter:
 		pass
 
 	def decide(): # decides to what answer it has to take 
+		pass 
 
-	def send_to() # sends the player to a room base on the command
+	def send_to(): # sends the player to a room base on the command
 	  	pass 
 
 
@@ -114,7 +115,7 @@ class Map:
 def function():
 	pass
 
-class player(underground_building):
+class player(Map):
 	
 	def __init__(self, bag, score, current_room):
 		self.bag = bag # list containing abjects in it
@@ -132,7 +133,7 @@ class player(underground_building):
 
 
 	def go(self, place, direc='starter'):
-		ddestin_func = self.handle_story[place] # find the related function
+		destin_func = self.handle_story[place] # find the related function
 		story_dic = destin_func() # execute the related room story function and store whole story in 'story dic'
 		self.current_room= place # change the place you are 
 		return story_dic[direc] # return the specific part of room's story
@@ -196,7 +197,7 @@ if __name__ == "__main__":
 	print(mmd.go('clock_room', 'starter'))
 
 	# if __name__ == "__main__":
-ddf
+
 
 
 
